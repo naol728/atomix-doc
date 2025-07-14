@@ -1,0 +1,70 @@
+:root {
+  --vp-c-brand: #347aeb;
+  --vp-c-brand-light: #5c9dff;
+  --vp-c-brand-dark: #2560cc;
+
+  --vp-c-bg: #fdfdfd; /* Light background */
+  --vp-c-bg-alt: #f2f5fb; /* Alternate card bg */
+  --vp-c-text: #1a1a1a;
+  --vp-c-text-light: #555;
+
+  --vp-font-family-base: "Inter", sans-serif;
+}
+
+/* 🌙 Dark mode overrides */
+.dark {
+  --vp-c-brand: #347aeb;
+  --vp-c-brand-light: #4d8dff;
+  --vp-c-brand-dark: #204fba;
+
+  --vp-c-bg: #0f111a;
+  --vp-c-bg-alt: #181b26;
+  --vp-c-text: #e4e4e4;
+  --vp-c-text-light: #a2a2a2;
+}
+
+/* 🌟 Hero Title Gradient Text */
+.VPHomeHero .name {
+  background: linear-gradient(90deg, #347aeb, #5c9dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 🌈 Features Section Container */
+.VPFeatures {
+  background: linear-gradient(135deg, #eef4ff, #dbe8ff);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(6px);
+}
+
+/* 🌙 Dark Mode Features Container — more black */
+.dark .VPFeatures {
+  background: linear-gradient(135deg, #0b0f18, #101621);
+  border: 1px solid #2b2f3a;
+}
+
+/* 💎 Individual Feature Item */
+.VPFeature {
+  background: linear-gradient(135deg, #f0f4ff, #e0ecff);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* 🌙 Dark Mode Feature Item — much deeper black */
+.dark .VPFeature {
+  background: linear-gradient(135deg, #0d111a, #131925);
+  border: 1px solid #292d38;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* 🖱️ Hover effect */
+.VPFeature:hover {
+  transform: translateY(-4px);
+}
