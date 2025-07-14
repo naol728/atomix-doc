@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,aj as t}from"./chunks/framework.7kMuBPYx.js";const c=JSON.parse('{"title":"createAtom","description":"","frontmatter":{},"headers":[],"relativePath":"api/index.md","filePath":"api/index.md"}'),h={name:"api/index.md"},n=t("",17),e=[n];function k(l,p,d,r,E,g){return a(),i("div",null,e)}const y=s(h,[["render",k]]);export{c as __pageData,y as default};
