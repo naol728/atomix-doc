@@ -1,49 +1,51 @@
 # Changelog
 
-> All notable changes to **Atomix** will be documented in this file.
-
-This project adheres to [Semantic Versioning](https://semver.org/).
-
----
-
-## [0.1.3] - 2025-07-14
-
-### ✨ Added
-
-- `subscribe()` now supports selectors with deep equality checks
-- New utility: `createAtom` now accepts an `onInit` lifecycle
-- Auto-pruning for unused subscriptions in React adapter
-
-### 🐛 Fixed
-
-- React integration issue with stale closures
-- Type inference issue for generic listeners
+> All notable changes to **Atomix** will be documented in this file.  
+> This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-## [0.1.2] - 2025-07-10
+## [1.0.1] — 2025-07-14
 
-### ✨ Added
+### ✨ Features
 
-- First release with:
-  - `createAtom()`
-  - `AtomixStore`
-  - `subscribe()` and `setState()`
+- Added `AtomixContext` to provide global store access via React context.
+- Introduced `useAtomix` hook for subscribing to store state via selectors.
+- Introduced `useActions` hook to access actions defined in `createAtom`.
+- Enhanced `subscribe()` to support selectors with deep equality comparison.
 
-### 🛠 Internal
+### 🐛 Bug Fixes
 
-- Added unit tests for core logic
-- Docs structure with VitePress
-
----
-
-## [0.1.0] - 2025-07-07
-
-- Initial commit
-- Project scaffolded using `pnpm`, `vitepress`, and `tsup`
+- Fixed stale closure issue in React bindings.
+- Resolved type inference issue for generic listener functions.
 
 ---
 
-## 🔗 Links
+## [0.0.2] — 2025-07-10
 
-- [Full GitHub Releases](https://github.com/naol728/Atomix/releases)
+### ✨ Features
+
+- Initial core API implementation:
+  - `createStore()`
+  - `useStore`
+  - `subscribe()`
+  - `setState()` and `getState()`
+
+### 🛠 Improvements
+
+- Established documentation structure using VitePress.
+
+---
+
+## [0.0.1] — 2025-07-01
+
+- Initial project scaffolding using:
+  - `pnpm` for package management
+  - `tsup` for bundling
+  - `vitepress` for documentation
+
+---
+
+## 🔗 Related
+
+- 📦 [GitHub Releases](https://github.com/naol728/Atomix/releases)
