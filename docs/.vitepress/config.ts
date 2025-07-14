@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const version = "0.1.3";
+const version = "1.0.1";
 
 export default defineConfig({
   base: "/atomix-doc/",

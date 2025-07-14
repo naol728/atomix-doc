@@ -12,8 +12,8 @@ hero:
     - theme: alt
       text: API Reference
       link: /api/
+  image: /logo.png
 
-  image: "/logo.png"
 features:
   - icon: ⚡️
     title: Tiny & Fast
@@ -33,4 +33,10 @@ features:
   - icon: 🧪
     title: Testable & Predictable
     details: No magic, no hidden behavior — every update flows through plain functions.
+  - icon: 🧱
+    title: Scales from Micro to Mega
+    details: Whether you're building a tiny widget or a complex app, Atomix stays fast, predictable, and modular.
+  - icon: 📦
+    title: Ultra-Small Bundle
+    details: "Core: 290 B, React: 2.8 kB (minified + brotli). Ideal for fast-loading apps and performance-focused teams."
 ---
