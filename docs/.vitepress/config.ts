@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 
-const version = "1.0.1";
+const version = "1.0.2";
 
 export default defineConfig({
   base: "/atomix-doc/",
@@ -21,6 +21,11 @@ export default defineConfig({
     nav: [
       { text: "Guide", link: "/guide/" },
       { text: "API", link: "/api/" },
+      {
+        text: "Showcase",
+        link: "https://atomix-showcase.vercel.app/",
+        target: "_blank",
+      },
       {
         text: `v${version}`,
         items: [

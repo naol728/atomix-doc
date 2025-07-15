@@ -19,27 +19,33 @@ export type Todo = {
   text: string;
   completed: boolean;
 };
+export interface InitalStat {
+  todos: Todo[];
+}
+export interface Actions {
+  addTodo: (text: string) => void;
+  toggleTodo: (id: number) => void;
+  removeTodo: (id: number) => void;
+}
 let nextId = 1;
-export const todoAtom = createAtom(
+export const todoAtom = createAtom<InitalStat, Actions>(
   {
     todos: [] as Todo[],
   },
-  (set) => {
+  (set) => ({
     addTodo: (text: string) =>
       set((s) => ({
         todos: [...s.todos, { id: nextId++, text, completed: false }],
-      }));
+      })),
     toggleTodo: (id: number) =>
       set((s) => ({
         todos: s.todos.map((todo) =>
           todo.id === id ? { ...todo, completed: !todo.completed } : todo
         ),
-      }));
+      })),
     removeTodo: (id: number) =>
-      set((s) => ({
-        todo: s.todos.filter((todo) => todo.id !== id),
-      }));
-  }
+      set((s) => ({ todos: s.todos.filter((el) => el.id !== id) })),
+  })
 );
 ```
 
@@ -64,12 +70,13 @@ export default function App() {
 ```tsx
 // components/TodoList.tsx
 import { useAtom, useActions } from "atomix-react";
+import type { Actions, InitalStat, Todo } from "./atom/todo";
 import { useState } from "react";
 
 export function TodoList() {
   const [text, setText] = useState("");
-  const todos = useAtom((s) => s.todos);
-  const { addTodo, toggleTodo, removeTodo } = useActions();
+  const todos: Todo[] = useAtomx((s: InitalStat) => s.todos);
+  const { addTodo, removeTodo, toggleTodo }: Actions = useActions();
 
   return (
     <div style={{ maxWidth: 400, margin: "0 auto" }}>

@@ -17,7 +17,7 @@ const state = useAtom((state) => state); // ❌ Subscribes to whole object
 Select only what you need:
 
 ```ts
-const count = useAtom(myAtom, (s) => s.count); // ✅
+const count = useAtom((s) => s.count); // ✅
 ```
 
 This reduces unnecessary re-renders and improves component isolation.
@@ -37,17 +37,6 @@ const doubled = useAtom((state) => state.count * 2); // ✅
 ```
 
 Derived state should be computed, not stored.
-
-## 📦 Use One Atom per Logical Unit
-
-It’s better to split state like this:
-
-```ts
-const authAtom = createAtom({ user: null });
-const settingsAtom = createAtom({ darkMode: false });
-```
-
-Than to combine everything into one global object. Smaller atoms are easier to manage and subscribe to.
 
 ## 💧 Keep Atom State Shallow
 
@@ -72,4 +61,3 @@ In future versions, Atomix may support batched updates to reduce render cycles. 
 | Use selectors          | Reduce unnecessary renders |
 | Avoid derived in state | Keep logic declarative     |
 | Split state by concern | Easier to debug and test   |
-| Keep atoms flat        | Simpler updates            |
