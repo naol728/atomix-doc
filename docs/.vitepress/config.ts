@@ -9,7 +9,7 @@ export default defineConfig({
     "Minimal reactive state management library for JavaScript and TypeScript.",
   lang: "en-US",
 
-  head: [["link", { rel: "icon", href: "/atomix-doc/logo.png" }]],
+  head: [["link", { rel: "icon", href: "/logo.png" }]],
 
   themeConfig: {
     logo: "/logo.png",
