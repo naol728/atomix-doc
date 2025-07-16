@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 const version = "1.0.2";
 
 export default defineConfig({
-  base: "/atomix-doc/",
+  base: "/",
   title: "Atomix",
   description:
     "Minimal reactive state management library for JavaScript and TypeScript.",
@@ -33,7 +33,7 @@ export default defineConfig({
             text: "Releases",
             link: "https://github.com/naol728/Atomix/releases",
           },
-          { text: "Changelog", link: "/guide/changelog" }, // optional: write one!
+          { text: "Changelog", link: "/guide/changelog" },
         ],
       },
       { text: "GitHub", link: "https://github.com/naol728/Atomix" },

@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r}from"./chunks/framework.CFy2Vn3M.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/core.md","filePath":"guide/core.md"}'),o={name:"guide/core.md"};function a(c,s,n,d,i,p){return r(),t("div")}const f=e(o,[["render",a]]);export{m as __pageData,f as default};
